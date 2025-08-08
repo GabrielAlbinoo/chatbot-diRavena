@@ -1,0 +1,31 @@
+{
+  "name": "chatbot-diravena",
+  "version": "1.0.0",
+  "description": "Chatbot para diRavena",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "scrape": "node scraper/scraper.js",
+    "scrape:terms": "node scraper/terms-scraper.js",
+    "scrape:privacy": "node scraper/privacy-scraper.js",
+    "scrape:refund": "node scraper/refund-scraper.js",
+    "scrape:all": "npm run scrape && npm run scrape:terms && npm run scrape:privacy && npm run scrape:refund"
+  },
+  "dependencies": {
+    "groq-sdk": "^0.5.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "puppeteer": "^21.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "chatbot",
+    "diravena",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT"
+}
