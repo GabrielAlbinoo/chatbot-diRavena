@@ -94,8 +94,13 @@ function shouldSearchProducts(messageLower, rawMessage) {
     messageLower.includes('entre') ||
     messageLower.includes('reais')
   );
+  const mentionsLink = (
+    messageLower.includes('link') ||
+    messageLower.includes('links') ||
+    messageLower.includes('url')
+  );
   const mentionsPricePattern = /por\s*R?\$?\s*\d+\s*(?:ou\s*menos)?/i.test(rawMessage);
-  return mentionsCategory || mentionsPriceWords || mentionsPricePattern;
+  return mentionsCategory || mentionsPriceWords || mentionsPricePattern || mentionsLink;
 }
 
 function shouldSearchPolicies(messageLower) {
