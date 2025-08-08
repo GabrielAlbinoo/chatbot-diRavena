@@ -6,7 +6,7 @@ async function bootstrap() {
   await loadScrapedData();
   const app = createApp();
   app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`Aplicação rodando em: http://localhost:${PORT}`);
   });
 }
 
